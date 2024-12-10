@@ -12,19 +12,19 @@ import shutil
 def get_client(model="gpt-3.5-turbo"):
     if model == "gpt-3.5-turbo":
         client = OpenAI(
-            base_url="https://api.xty.app/v1", 
+            base_url="", 
             api_key="",
             http_client=httpx.Client(
-                base_url="https://api.xty.app/v1",
+                base_url="",
                 follow_redirects=True,
             ),
         )
     elif model == "gpt-4":
         client = OpenAI(
-            base_url="https://api.xty.app/v1", 
+            base_url="", 
             api_key="",
             http_client=httpx.Client(
-                base_url="https://api.xty.app/v1",
+                base_url="",
                 follow_redirects=True,
             ),
         )
