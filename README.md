@@ -36,14 +36,14 @@ Future Directions:
 
 ## Project Structure
 
-1. **`captions`**: Contains pre-captioned datasets using `llava1.5-7b`. These can be used directly.
+1. `captions`: Contains pre-captioned datasets using `llava1.5-7b`. These can be used directly.
 
-2. **`config`**:
+2. `config`:
    - `0_summary.yaml` sets hyperparameters for different stages of the SSDLLM pipeline. Adjust these when running different datasets. The used hyperparameters are automatically saved in the `output` directory when running the code.
    - Other YAML files correspond to different datasets, including task name, dataset name, class count, and average count per class. These settings affect the final processing form, so they need to be configured properly. Examples are provided for reference.
    - You can format your own dataset similarly in YAML.
 
-3. **`run.sh`**: 
+3. `run.sh`: 
    - Sets the execution logic for the entire codebase. You can modify the `mllm` and `llm` names, but ensure the preparation of corresponding MLLM and LLM exist.
 
 ## Configuration
