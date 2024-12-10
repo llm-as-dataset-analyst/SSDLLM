@@ -36,36 +36,22 @@ Future Directions:
 
 ## Project Structure
 
-1. **Captions Directory**: Contains pre-captioned datasets using `llava1.5`. These can be used directly.
+1. **captions**: Contains pre-captioned datasets using `llava1.5-7b`. These can be used directly.
 
-2. **Custom Dataset Captioning**: 
-   - To caption your own dataset, refer to `step1_image_caption/scripts_infer_batch.sh` for modifications.
-   - Prepare your dataset in a format readable by PyTorch's `ImageFolder`, e.g.,
-
-     ```
-     imagenet
-     ├── bird
-     ├── boat
-     ├── cat
-     ├── dog
-     ```
-
-   - Different MLLMs can be used for captioning, and you can modify them for batch inference from Hugging Face demos.
-
-3. **Config Directory**:
+2. **config**:
    - `0_summary.yaml` sets hyperparameters for different stages of the SSDLLM pipeline. Adjust these when running different datasets. The used hyperparameters are automatically saved in the `output` directory when running the code.
    - Other YAML files correspond to different datasets, including task name, dataset name, class count, and average count per class. These settings affect the final processing form, so they need to be configured properly. Examples are provided for reference.
    - You can format your own dataset similarly in YAML.
 
-4. **run.sh**: 
-   - Sets the execution logic for the entire codebase. You can modify the `mllm` and `llm` names, but ensure the corresponding MLLM and LLM exist.
+3. **run.sh**: 
+   - Sets the execution logic for the entire codebase. You can modify the `mllm` and `llm` names, but ensure the preparation of corresponding MLLM and LLM exist.
 
 ## Configuration
 
 1. Open the `utils.py` file and locate the following code snippet:
 
    ```python
-   api_key="sk-tC6amT2brKjK11nAC0830178D6E748F18072A17dE9D53784"
+   api_key=""
    ```
 
    Replace `api_key` with your OpenAI API key.
@@ -87,6 +73,21 @@ Future Directions:
 
    Make sure the corresponding configurations for your chosen models are properly set up.
 
+3. **Custom Dataset Captioning**: 
+   - To caption your own dataset, refer to `step1_image_caption/scripts_infer_batch.sh` for modifications.
+   - Prepare your dataset in a format readable by PyTorch's `ImageFolder`, e.g.,
+
+     ```
+     dataset
+     ├── imagenet
+     │   ├── bird
+     │   ├── boat
+     │   ├── cat
+     │   ├── dog
+     ```
+
+   - Different MLLMs can be used for captioning, and you can modify them for batch inference from Hugging Face demos.
+
 ## Usage
 
 Run the following command to start the script:
@@ -95,10 +96,25 @@ Run the following command to start the script:
    bash run.sh
    ```
 
-## Contributing
+## Acknowledgement
 
-Contributions are welcome! Please fork this repository and submit a pull request.
+This project is benefited from the following repositories:
+- [ICTC](https://github.com/sehyunkwon/ICTC)
+- [LLAVA](https://github.com/haotian-liu/LLaVA)
 
-## License
+Thanks for their great works!
 
-This project is licensed under the MIT License.
+## Citation
+
+If you find this project useful, please cite using this BibTeX:
+
+```
+@inproceedings{luo2025llm,
+  title={LLM as dataset analyst: Subpopulation structure discovery with large language model},
+  author={Luo, Yulin and An, Ruichuan and Zou, Bocheng and Tang, Yiming and Liu, Jiaming and Zhang, Shanghang},
+  booktitle={European Conference on Computer Vision},
+  pages={235--252},
+  year={2025},
+  organization={Springer}
+}
+```

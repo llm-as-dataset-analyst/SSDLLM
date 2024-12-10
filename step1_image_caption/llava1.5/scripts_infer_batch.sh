@@ -1,10 +1,9 @@
 model_path=llava-hf/llava-1.5-7b-hf
 model_name=llava1.5-7b
 
-# # dataset_root=/mnt/bn/lyl-test/mlx/users/luoyulin/playground/code/ssdllm/ICTC/dataset/stl10
-# # dataset_name=stl10_0.1
-# dataset_root=/mnt/bn/lyl-test/mlx/users/luoyulin/playground/code/ssdllm/ICTC/dataset
-# dataset_name=imagenet
+# refence path: dataset/imagenet/bird
+dataset_root=dataset
+dataset_name=imagenet
 mkdir -p ${dataset_root}/${dataset_name}/split/${model_name}
 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7

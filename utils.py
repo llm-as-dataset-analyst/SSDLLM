@@ -13,7 +13,7 @@ def get_client(model="gpt-3.5-turbo"):
     if model == "gpt-3.5-turbo":
         client = OpenAI(
             base_url="https://api.xty.app/v1", 
-            api_key="sk-tC6amT2brKjK11nAC0830178D6E748F18072A17dE9D53784",
+            api_key="",
             http_client=httpx.Client(
                 base_url="https://api.xty.app/v1",
                 follow_redirects=True,
@@ -22,7 +22,7 @@ def get_client(model="gpt-3.5-turbo"):
     elif model == "gpt-4":
         client = OpenAI(
             base_url="https://api.xty.app/v1", 
-            api_key="sk-e3Qbj2weTQ50AACYEb3c279709B94e2bA115F190C96100B9",
+            api_key="",
             http_client=httpx.Client(
                 base_url="https://api.xty.app/v1",
                 follow_redirects=True,
