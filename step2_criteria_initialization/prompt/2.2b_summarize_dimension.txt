@@ -1,0 +1,5 @@
+Here are several words each standing for a dimension to differentiate the images in a dataset, 
+but some of these words may be highly similar to each other and thus redundant. 
+Please give a refined set of classification dimensions strictly in the same format. 
+Here are the dimensions: {dimensions} 
+Answer strictly in the following format: 'Summarized Dimension: A, B, ...', such as: 'Summarized Dimension: Action, Location, Mood, ...'

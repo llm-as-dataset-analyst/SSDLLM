@@ -1,0 +1,33 @@
+Hi, Chat! I'm trying to classify the following caption into a classification criteria. However, it seems the current criteria fails to capture certain details that would help differentiate this caption. 
+
+Caption: {sample}  
+Current Criteria: {criteria}  
+Test Results: {test_results}
+
+We are unable to classify this caption using the provided criteria due to one of the following reasons:
+
+1. **LLM Hallucination**: If you believe the current criteria is reasonable, and the sample can be classified under one of them, the current failure may be due to LLM hallucination. 
+    If the majority of classifications are correct and only a small portion of the results appears highly unreasonable, it is likely due to hallucination. In this case, please do nothing.
+   - **Answer format**: {{"hallucination": []}}
+
+2. **Hard Case**: If each classification result is reasonable on its own, but there are inconsistencies between them (i.e., the results differ but none are unreasonable), 
+    this situation may be considered a "hard case" where there is no clear-cut classification. In this case, please do nothing.
+   - **Answer format**: {{"hard_case": []}}
+
+3. **Attribute Redundancy**: If there are redundant attributes in the criteria that are already covered by `test_results`, 
+    please identify and replace them with a single, unified keyword that represents all the redundant attributes. 
+   - **Answer format**: {{"redundant": ["unified keyword"]}}
+   (Only include a **single keyword** that replaces all the redundant or duplicated attributes in relation to `test_results`).
+
+4. **Missing Attributes**: If some important attributes are missing and need to be added to the criteria to accurately classify the caption, 
+    please suggest one attribute to add.
+   - **Answer format**: {{"missing": ["keyword"]}}
+
+Please note: 
+1. The content inside curly braces (e.g., {{hallucination: []}}, {{redundant: [...]}}, {{missing: [...]}}) is for our **post-processing** and should not be handled by you. 
+    You only need to provide the answer in the specified format as described above. 
+2. If you need to suggest a missing keyword or summarize redundant keywords, ensure that the level of granularity is consistent with the existing criteria. 
+    Avoid suggesting overly broad or overly specific terms that deviate significantly from the current level.
+3. When merging redundant keywords or adding new attributes, avoid incremental changes such as adding modifiers 
+    (e.g., adding adjectives or descriptors like “big” or “fast” to existing keywords). 
+    The new or merged keyword should reflect a distinct concept rather than a modification of an existing term.

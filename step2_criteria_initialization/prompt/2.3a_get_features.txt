@@ -1,0 +1,8 @@
+Chat, I want you to look at a few captions of images in my dataset about {main_subject} and 
+formulate a classification criteria for me to better structure my datasets with respect to one classification dimension: {dimension}. 
+For example, a good criteria I want you to craft might be similar to 'action: blowing bubbles, fixing a bike, climbing...', 
+where the word 'action' stands for the dimension of this classification and the phrases 'blowing bubbles', 'fixing a bike', 'climbing'...stand for 
+the specific action involved in the image described by the caption. Here are the captions: {caption_samples} 
+Please consider carefully about what to be included in the criteria and only include the key phrases that can be frequently used. 
+Each phrase should be less than three words. Now give me the criteria strictly in the form of 'dimension: phrase1, phrase2, ...' 
+with at most 10 key phrases in total.

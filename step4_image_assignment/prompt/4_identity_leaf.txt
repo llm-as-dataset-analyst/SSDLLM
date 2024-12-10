@@ -1,0 +1,6 @@
+Chat, help me to classify the following caption into a classification criteria with respect to the classification dimension of {dimension} please. 
+The caption is: {caption} The classification criteria is: {features} 
+You have to pick up one among these choices. 
+Give me the answer strictly in the form of {{keyword}} 
+if you think the caption belongs to this keyword if categorized by this criteria. 
+Give me and only give me the answer:

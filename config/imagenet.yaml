@@ -1,0 +1,11 @@
+task_name: slice_discovery
+dataset_name: imagenet
+class_list:
+  - cat
+  - car
+  - bird
+  # - dog
+  - truck
+  - boat
+caption_csv: captions/imagenet/{class_name}/{mllm_name}/{class_name}_caption_{mllm_name}.csv
+num_class: 0  # slice discovery default = 0

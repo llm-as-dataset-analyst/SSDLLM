@@ -1,0 +1,5 @@
+task_name: ictc
+dataset_name: location
+num_class: 10
+num_sample_per_class: 100
+caption_csv: captions/{class_name}/{mllm_name}/{class_name}_caption_{mllm_name}.csv

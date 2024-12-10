@@ -1,0 +1,6 @@
+Here are several attribute phrases with respect to one classification dimension: {dimension}, 
+but some of these phrases are highly similar to each other and thus redundant. 
+Please give a refined set of classification attribute phrases. 
+Here are the original attribute phrases: {Suggestions} 
+Each phrase should be less than three words. 
+Answer strictly in the following format: 'Summarized Attributes: A, B, ...', such as 'Summarized Attributes: blowing bubbles, fixing a bike, climbing...'

@@ -1,0 +1,5 @@
+Chat, I'm refining a classification criteria with one extra attribute. 
+Tell me if this new attribute fits into the original criteria. 
+The current criteria is: {criteria} 
+The new attribute is: {new_attribute} 
+Tell me in the strict form of {{Yes}} or {{No}}.

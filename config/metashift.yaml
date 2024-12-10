@@ -1,0 +1,7 @@
+task_name: subpopulation_shift
+dataset_name: metashift
+class_list:
+  - cat
+  - dog
+caption_csv: captions/metashift/{class_name}/{mllm_name}/{class_name}_caption_{mllm_name}.csv
+num_class: 0  # subpopulation shift default = 0

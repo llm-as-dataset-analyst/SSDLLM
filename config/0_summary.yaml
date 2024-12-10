@@ -1,0 +1,12 @@
+num_sample_rounds_1: 10
+num_samples_each_round_1: 20
+ci_thresh_1: 0.2
+
+num_sample_rounds_2: 20
+num_samples_each_round_2: 20
+ci_thresh_2: 1.0
+
+num_refining_rounds: 20
+num_testing: 3
+num_suggestions: 5
+
