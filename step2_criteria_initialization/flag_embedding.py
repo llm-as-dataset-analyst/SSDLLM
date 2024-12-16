@@ -27,10 +27,10 @@ def find_most_similar_indices(list1, list2, return_second=False):
             similarity = cosine_similarity(embedding1, embedding2)
             all_similar_scores.append((similarity, i))
 
-        # 按相似度从高到低排序
+        # Sort by similarity from high to low
         all_similar_scores.sort(reverse=True, key=lambda x: x[0])
 
-        # 获取最相似和第二相似的索引
+        # Get the most similar and second most similar indices
         most_similar_indices_list1.append(all_similar_scores[0][1])
         second_similar_indices_list1.append(all_similar_scores[1][1])
 

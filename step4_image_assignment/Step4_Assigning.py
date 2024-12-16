@@ -13,7 +13,6 @@ from multiprocessing import Pool
 import random
 
 num_testing = 1
-
 def default_argument_parser():
     parser = argparse.ArgumentParser(description="suggest-dimensions")
     parser.add_argument(
@@ -114,7 +113,7 @@ def main():
         num_suggestions = summary_cfg["num_suggestions"]
 
         ######## Create Output Dir  ####################
-        # 构建 output_dir 路径
+        # Construct output_dir path
         output_dir = os.path.join(
                         output_root, 
                         main_subject, 
@@ -134,7 +133,7 @@ def main():
             for img_name, caption in captions_obj.items():
                 captions.append({"n_label": n_label, "img_name": img_name, "caption": caption,"attr": {}})
 
-        ############# Testign and Refining the Criteria ############
+        ############# Testing and Refining the Criteria ############
         # Load the Criteria
         Dimensions = []
         Features = []

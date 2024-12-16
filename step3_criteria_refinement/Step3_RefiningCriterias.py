@@ -8,7 +8,6 @@ import os
 import argparse
 from utils import *
 from tqdm.contrib.concurrent import process_map
-
 def default_argument_parser():
     parser = argparse.ArgumentParser(description="suggest-dimensions")
     parser.add_argument(
@@ -157,7 +156,7 @@ def main():
         num_class = dataset_cfg["num_class"]
 
         ######## Create Output Dir  ####################
-        # 构建 output_dir 路径
+        # Construct output_dir path
         output_dir = os.path.join(
                         output_root, 
                         main_subject, 
@@ -202,7 +201,7 @@ def main():
             features = features.strip()
             summarize_attributes_prompt = load_prompt_from_file("step2_criteria_initialization/prompt/2.3b_summarize_attributes.txt")
             Summarize_Attributes_Prompt = summarize_attributes_prompt.format(dimension=dimension, Suggestions=features)
-            if num_class != 0:  # 这边还有一个prompt, 之后去处理一下
+            if num_class != 0:  # There is another prompt here, handle it later
                 Summarize_Attributes_Prompt += f" I require that the number of final summarized attributes should be equal to {num_class} strictly!!"
             
             Summarize_Attributes = get_completion(Summarize_Attributes_Prompt, args.llm)

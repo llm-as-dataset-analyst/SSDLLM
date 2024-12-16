@@ -153,7 +153,7 @@ def merge_dimensions(data, thresh):
             intersection = attrs1.intersection(attrs2)
             
             # Calculate if intersection is more than 30% of the smaller set
-            if len(intersection) / min(len(attrs1), len(attrs2)) > thresh:  # 先不处理合并的事情
+            if len(intersection) / min(len(attrs1), len(attrs2)) > thresh:  # Do not handle merging for now
                 # Merge attributes from key2 to key1
                 current_attrs.update(attrs2)
                 # Mark key2 as merged
@@ -186,19 +186,19 @@ def load_prompt_from_file(filepath):
 
 def save_dict_to_yaml(data, output_dir, filename="output.yaml"):
     """
-    将一个字典保存到指定路径的 YAML 文件中。
+    Save a dictionary to a YAML file at the specified path.
     
-    :param data: 要保存的字典
-    :param output_dir: 保存文件的目录
-    :param filename: 保存文件的名称，默认是 output.yaml
+    :param data: The dictionary to save
+    :param output_dir: The directory to save the file in
+    :param filename: The name of the file to save, default is output.yaml
     """
-    # 确保目录存在，如果不存在则创建
+    # Ensure the directory exists, create it if it doesn't
     os.makedirs(output_dir, exist_ok=True)
     
-    # 构建完整的文件路径
+    # Construct the full file path
     file_path = os.path.join(output_dir, filename)
     
-    # 将字典写入 YAML 文件
+    # Write the dictionary to the YAML file
     with open(file_path, 'w') as yaml_file:
         yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True)
     
@@ -206,18 +206,18 @@ def save_dict_to_yaml(data, output_dir, filename="output.yaml"):
 
 def copy_file(source_file, destination_dir):
     """
-    复制文件到指定目录。如果目录不存在，则创建该目录。
+    Copy a file to the specified directory. Create the directory if it doesn't exist.
 
-    :param source_file: 源文件的路径
-    :param destination_dir: 目标目录
+    :param source_file: The path of the source file
+    :param destination_dir: The target directory
     """
-    # 确保目标目录存在，如果不存在则创建
+    # Ensure the target directory exists, create it if it doesn't
     os.makedirs(destination_dir, exist_ok=True)
     
-    # 获取目标文件路径
+    # Get the target file path
     destination_file = os.path.join(destination_dir, os.path.basename(source_file))
     
-    # 复制文件
+    # Copy the file
     try:
         shutil.copy2(source_file, destination_file)
         print(f"Config file have been saved in : {destination_file}")

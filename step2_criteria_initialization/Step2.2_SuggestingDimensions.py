@@ -1,9 +1,6 @@
 import random
 from re import I
-import openai
-import json
 import numpy as np
-import time
 import csv
 from utils import *
 import argparse
@@ -63,10 +60,10 @@ def main():
         num_testing = summary_cfg["num_testing"]
         num_suggestions = summary_cfg["num_suggestions"]
 
-        num_of_selection_threshold = int(num_sample_rounds_1 * thresh)  # 之后可能要调整阈值，大部分情况不用
+        num_of_selection_threshold = int(num_sample_rounds_1 * thresh)  # May need to adjust the threshold later, but not in most cases
 
         ######## Create Output Dir  ####################
-        # 构建 output_dir 路径
+        # Construct output_dir path
         output_dir = os.path.join(
                         output_root, 
                         main_subject, 
@@ -76,7 +73,7 @@ def main():
                         f"attribute-{num_sample_rounds_2}-{num_samples_each_round_2}_"
                         f"refine-{num_refining_rounds}-{num_testing}-{num_suggestions}"
                     )
-        # 创建目录，等效于 `mkdir -p`，即使父目录不存在也会创建
+        # Create directory, equivalent to `mkdir -p`, will create parent directories if they do not exist
         os.makedirs(output_dir, exist_ok=True)
         cfg_dir = os.path.join(output_dir, "cfg")
         os.makedirs(cfg_dir, exist_ok=True)
@@ -123,7 +120,6 @@ def main():
         Dimensions = Dimensions.split(',')
         Dimensions = get_elements_over_count(Dimensions, num_of_selection_threshold)  
         Dimensions = ','.join(Dimensions)
-        # Dimensions = Dimensions.replace(' ', '').replace("focus", "")  # 这个dimension不需要
         print("Here are the dimensions suggested after majority counting:", Dimensions)
 
         # Summarize dimensions using GPT
@@ -151,7 +147,7 @@ def main():
                 final_topic = Summarized_Dimensions_list[most_idx]
                 np.savetxt(os.path.join(output_dir, main_subject + '_selected_summarized_final_dimensions.csv'), [final_topic], fmt='%s')
         elif task_name in ["slice_discovery", "subpopulation_shift"]:
-            np.savetxt(os.path.join(output_dir, main_subject + '_selected_summarized_final_dimensions.csv'), [Summarized_Dimensions], fmt='%s')  # 统一格式
+            np.savetxt(os.path.join(output_dir, main_subject + '_selected_summarized_final_dimensions.csv'), [Summarized_Dimensions], fmt='%s')  # Unified format
 
 
 if __name__ == "__main__":

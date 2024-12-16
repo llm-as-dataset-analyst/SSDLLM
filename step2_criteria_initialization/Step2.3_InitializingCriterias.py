@@ -80,7 +80,7 @@ def process_dimensions(args):
     
     Summarize_Attributes_Prompt = summarize_attributes_prompt.format(dimension=dimension, Suggestions=features)
 
-    if num_class != 0:  # 这边还有一个prompt, 之后去处理一下
+    if num_class != 0:  # There is another prompt here, handle it later
         Summarize_Attributes_Prompt += f" I require that the number of final summarized attributes should be equal to {num_class} strictly!!"
     
     Summarize_Attributes = get_completion(Summarize_Attributes_Prompt, llm)
@@ -130,7 +130,7 @@ def main():
         num_class = dataset_cfg["num_class"]
 
         ######## Create Output Dir  ####################
-        # 构建 output_dir 路径
+        # Construct output_dir path
         output_dir = os.path.join(
                         output_root, 
                         main_subject, 
