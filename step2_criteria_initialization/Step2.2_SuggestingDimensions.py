@@ -93,7 +93,10 @@ def main():
                 caption_samples += f'[{sample}]'
             
             # Build the prompt for dimensions
-            Get_Dimension_Prompt = get_dimension_prompt.format(batch_size=num_samples_each_round_1, main_subject=main_subject, caption_samples=caption_samples)
+            if task_name == "ictc":
+                Get_Dimension_Prompt = get_dimension_prompt.format(batch_size=num_samples_each_round_1, main_subject="dimensions", caption_samples=caption_samples)
+            else:
+                Get_Dimension_Prompt = get_dimension_prompt.format(batch_size=num_samples_each_round_1, main_subject=main_subject, caption_samples=caption_samples)
             
             print(f"Finding the Dimensions. Round: {i + 1} / {num_sample_rounds_1}. Getting Responses from GPT...")
             Dimension_Response = get_completion(Get_Dimension_Prompt, args.llm)
