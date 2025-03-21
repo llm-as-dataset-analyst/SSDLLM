@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">LLM as Dataset Analyst: SSD-LLM</h1>
+  <h1 align="center">SSD-LLM <sub><sup>[ECCV 2024]</sup></sub></h1>
 
   <a href="https://arxiv.org/abs/2405.02363">
     <img src="https://img.shields.io/badge/arXiv-2405.02363-b31b1b.svg?style=flat&logo=arxiv&logoColor=white" alt="arXiv">
@@ -14,8 +14,6 @@
     <img src="https://img.shields.io/badge/Project-Website-brightgreen.svg?style=flat&logo=githubpages&logoColor=white" alt="Project Website">
   </a>
 </p>
-
----
 
 ## 🔗 Featured Resources
 
