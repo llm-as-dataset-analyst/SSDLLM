@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">SSD-LLM <sub><sup>[ECCV 2024]</sup></sub></h1>
+  <h1 align="center">LLM as Dataset Analyst: Subpopulation Structure Discovery with Large Language Model</h1>
 
   <p align="center">
     <a href="https://arxiv.org/abs/2405.02363">
