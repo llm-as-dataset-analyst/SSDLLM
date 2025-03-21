@@ -25,13 +25,13 @@
 
 > 🧠 *Discover subpopulation structures using Large Language Models (LLMs) with linguistic interpretability and automation.*
 
----
+
 
 <div align="center">
   <img src="fig/ssd_llm.png" alt="SSD-LLM Overview" width="800"/>
 </div>
 
----
+
 
 ## 🧩 Overview
 
@@ -47,7 +47,7 @@
 - 🖼️ **Expansion to more tasks**: Broadening the scope of SSD-LLM to more visual and multimodal datasets  
 - ✅ **Unbiased dataset creation**: Promoting the creation of unbias datasets, enabling more reliable analysis and model training
 
----
+
 
 ## ⚙️ Installation
 
@@ -66,7 +66,7 @@
    pip install -e .
    ```
 
----
+
 
 ## 📁 Project Structure
 
@@ -79,12 +79,16 @@ SSDLLM/
 └── step1_image_caption/    # Custom dataset captioning logic
 ```
 
-- `captions/`: Contains pre-captioned datasets using `llava1.5-7b`  
-- `config/`: YAML files with pipeline settings (examples provided)  
-- `run.sh`: Shell script to launch the full pipeline  
-- `step1_image_caption/`: Scripts for batch captioning custom datasets
+- `captions/`: Pre-captioned datasets using `llava1.5-7b`; ready for direct use.  
+- `config/`: Contains YAML configs:  
+  - `0_summary.yaml`: Sets pipeline hyperparameters (auto-saved to `output/` after running).  
+  - Other files define task name, dataset name, class count, etc. Follow provided examples to format your own.  
+- `run.sh`: Pipeline launcher script. Supports switching `mllm` and `llm`—ensure corresponding models are prepared.  
+- `utils.py`: Contains OpenAI API key and helper functions.  
+- `step1_image_caption/`: Batch captioning scripts for custom datasets (supports ImageFolder format).
 
----
+
+
 
 ## 🛠️ Configuration
 
@@ -113,7 +117,7 @@ SSDLLM/
      ```
    - Modify `step1_image_caption/scripts_infer_batch.sh` for inference logic.
 
----
+
 
 ## 🚀 Usage
 
@@ -122,7 +126,7 @@ Run the pipeline using:
 bash run.sh
 ```
 
----
+
 
 ## 🙏 Acknowledgements
 
@@ -147,6 +151,5 @@ If you find our work helpful, please cite us:
 }
 ```
 
----
 
 🌟 **Star this repo** if you find it useful! Contributions and feedback are welcome 🙌
