@@ -1,6 +1,6 @@
-# SSD-LLM [ECCV 2024]
-
 <p align="center">
+  <h1 align="center">SSD-LLM <sub><sup>[ECCV 2024]</sup></sub></h1>
+
   <a href="https://arxiv.org/abs/2405.02363">
     <img src="https://img.shields.io/badge/arXiv-2405.02363-b31b1b.svg?style=flat&logo=arxiv&logoColor=white" alt="arXiv">
   </a>
@@ -15,6 +15,7 @@
   </a>
 </p>
 
+---
 
 ## 🔗 Featured Resources
 
@@ -25,27 +26,25 @@
 
 > 🧠 *Discover subpopulation structures using Large Language Models (LLMs) with linguistic interpretability and automation.*
 
+---
 
+## 🧩 Overview
 
 <div align="center">
   <img src="fig/ssd_llm.png" alt="SSD-LLM Overview" width="800"/>
 </div>
 
-
-
-## 🧩 Overview
-
 **SSD-LLM** is an innovative framework for discovering subpopulation structures within datasets using Large Language Models (LLMs). By leveraging LLMs' extensive world knowledge and advanced reasoning capabilities, SSD-LLM offers:
 
-- ✨ **Linguistically Interpretable Subpopulation Discovery**: Provides insights into dataset structures in an understandable language format
-- 🤖 **Automated Dataset Analysis**: Utilizes LLMs’ capabilities to automate the discovery of subpopulation patterns
-- 🔄 **Comprehensive Workflow**: Designed to address a wide range of downstream tasks related to subpopulations
-- 🔌 **Flexible Integration**: Support various MLLMs and LLMs
+- ✨ **Linguistically Interpretable Subpopulation Discovery**: Understand dataset structures through natural language  
+- 🤖 **Automated Dataset Analysis**: Use LLMs to uncover subpopulation patterns with minimal human effort  
+- 🔄 **Comprehensive Workflow**: End-to-end pipeline for subpopulation discovery and evaluation  
+- 🔌 **Flexible Integration**: Compatible with various MLLMs and LLMs
 
 **Future Directions**:
-- 📊 **Exploration of diverse structures**: Tailoring subpopulation structure forms to meet specific task requirements
-- 🖼️ **Expansion to more tasks**: Broadening the scope of SSD-LLM to more visual and multimodal datasets  
-- ✅ **Unbiased dataset creation**: Promoting the creation of unbias datasets, enabling more reliable analysis and model training
+- 📊 **Diverse structure discovery**: Tailoring subpopulation forms to specific downstream needs  
+- 🖼️ **Multimodal extension**: Applying SSD-LLM to vision and multimodal datasets  
+- ✅ **Unbiased data generation**: Supporting fair and balanced dataset development
 
 
 
