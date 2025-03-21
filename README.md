@@ -15,7 +15,6 @@
   </a>
 </p>
 
----
 
 ## 🔗 Featured Resources
 
@@ -38,15 +37,15 @@
 
 **SSD-LLM** is an innovative framework for discovering subpopulation structures within datasets using Large Language Models (LLMs). By leveraging LLMs' extensive world knowledge and advanced reasoning capabilities, SSD-LLM offers:
 
-- ✨ **Linguistically Interpretable Subpopulation Discovery**  Provides insights into dataset structures in an understandable language format
-- 🤖 **Automated Dataset Analysis via LLMs**  Utilizes LLMs’ capabilities to automate the discovery of subpopulation patterns
-- 🔄 **Comprehensive & Modular Workflow**  Designed to address a wide range of downstream tasks related to subpopulations
-- 🔌 **Flexible Integration with Various MLLMs and LLMs**
+- ✨ **Linguistically Interpretable Subpopulation Discovery**: Provides insights into dataset structures in an understandable language format
+- 🤖 **Automated Dataset Analysis**: Utilizes LLMs’ capabilities to automate the discovery of subpopulation patterns
+- 🔄 **Comprehensive Workflow**: Designed to address a wide range of downstream tasks related to subpopulations
+- 🔌 **Flexible Integration**: Support various MLLMs and LLMs
 
 **Future Directions**:
-- 📊 **Exploration of diverse subpopulation structures** Tailoring subpopulation structure forms to meet specific task requirements
-- 🖼️ **Expansion to vision and multimodal tasks** Broadening the scope of SSD-LLM to more visual and multimodal datasets  
-- ✅ **Contribution to unbiased dataset creation** Promoting the creation of unbias datasets, enabling more reliable analysis and model training
+- 📊 **Exploration of diverse structures**: Tailoring subpopulation structure forms to meet specific task requirements
+- 🖼️ **Expansion to more tasks**: Broadening the scope of SSD-LLM to more visual and multimodal datasets  
+- ✅ **Unbiased dataset creation**: Promoting the creation of unbias datasets, enabling more reliable analysis and model training
 
 ---
 
@@ -87,57 +86,45 @@ SSDLLM/
 
 ---
 
-## Configuration
+## 🛠️ Configuration
 
-1. Open the `utils.py` file and locate the following code snippet:
-
+1. **Set your OpenAI API Key** in `utils.py`:
    ```python
-   api_key=""
+   api_key = "your-openai-api-key"
    ```
 
-   Replace `api_key` with your OpenAI API key.
-
-2. Open the `run.sh` file and modify the following parameters as needed:
-
+2. **Adjust `run.sh` Parameters**:
    ```bash
    mllm_name=llava1.5-7b
    llm_name=gpt-3.5-turbo
-   
    for class_name in mood
    ```
+   - `mllm_name`: Multimodal LLM for captioning  
+   - `llm_name`: Main LLM for reasoning & subpopulation discovery  
+   - `class_name`: Dataset to analyze (check `/config` for available ones)
 
-   `mllm_name`: Specify the multimodal language model to use (e.g., llava1.5-7b)
-   
-   `llm_name`: Choose the language model (e.g., gpt-3.5-turbo, gpt-4)
-   
-   `class_name`: Set the dataset name you need to process. The available dataset names that can be executed directly are listed in the config folder.
-
-   Make sure the corresponding configurations for your chosen models are properly set up.
-
-3. Custom Dataset Captioning
-   - To caption your own dataset, refer to `step1_image_caption/scripts_infer_batch.sh` for modifications.
-   - Prepare your dataset in a format readable by PyTorch's `ImageFolder`, e.g.,
-
+3. **Prepare Custom Dataset (Optional)**:
+   - Format your images using `ImageFolder` structure:
      ```
-     dataset
-     ├── imagenet
-     │   ├── bird
-     │   ├── boat
-     │   ├── cat
-     │   ├── dog
+     dataset/
+     ├── class_a/
+     ├── class_b/
+     └── ...
      ```
+   - Modify `step1_image_caption/scripts_infer_batch.sh` for inference logic.
 
-   - Different MLLMs can be used for captioning, and you can modify them for batch inference from Hugging Face demos.
+---
 
-## Usage
+## 🚀 Usage
 
-Run the following command to start the script:
+Run the pipeline using:
+```bash
+bash run.sh
+```
 
-   ```bash
-   bash run.sh
-   ```
+---
 
-## Acknowledgement
+## 🙏 Acknowledgements
 
 This project is benefited from the following repositories:
 - [ICTC](https://github.com/sehyunkwon/ICTC)
@@ -145,11 +132,11 @@ This project is benefited from the following repositories:
 
 Thanks for their great works!
 
-## Citation
+## 📚 Citation
 
-If you find this project useful, please cite using this BibTeX:
+If you find our work helpful, please cite us:
 
-```
+```bibtex
 @inproceedings{luo2025llm,
   title={LLM as dataset analyst: Subpopulation structure discovery with large language model},
   author={Luo, Yulin and An, Ruichuan and Zou, Bocheng and Tang, Yiming and Liu, Jiaming and Zhang, Shanghang},
@@ -159,3 +146,7 @@ If you find this project useful, please cite using this BibTeX:
   organization={Springer}
 }
 ```
+
+---
+
+🌟 **Star this repo** if you find it useful! Contributions and feedback are welcome 🙌
