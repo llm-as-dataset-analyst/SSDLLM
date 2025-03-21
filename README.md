@@ -1,38 +1,73 @@
 # SSD-LLM [ECCV 2024]
 
-![SSD-LLM Overview](fig/ssd_llm.png)
+<p align="center">
+  <a href="https://arxiv.org/abs/2405.02363">
+    <img src="https://img.shields.io/badge/arXiv-2405.02363-b31b1b.svg?style=flat&logo=arxiv&logoColor=white" alt="arXiv">
+  </a>
+  <a href="https://link.springer.com/chapter/10.1007/978-3-031-73414-4_14">
+    <img src="https://img.shields.io/badge/ECCV-2024-blue.svg?style=flat&logo=spring&logoColor=white" alt="ECCV 2024">
+  </a>
+  <a href="https://www.youtube.com/watch?v=pw-ZPzlXtQA">
+    <img src="https://img.shields.io/badge/Video-Demo-red.svg?style=flat&logo=youtube&logoColor=white" alt="Video Demo">
+  </a>
+  <a href="https://llm-as-dataset-analyst.github.io/">
+    <img src="https://img.shields.io/badge/Project-Website-brightgreen.svg?style=flat&logo=githubpages&logoColor=white" alt="Project Website">
+  </a>
+</p>
 
-## Overview
-SSD-LLM is an innovative framework for discovering subpopulation structures within datasets using Large Language Models (LLMs). By harnessing LLMs' broad world knowledge and advanced capabilities in reasoning, summarization, and instruction-following, this approach has several key features:
-- **Linguistically Interpretable Subpopulation Discovery**: Provides insights into dataset structures in an understandable language format
-- **Automated Dataset Analysis**: Utilizes LLMs’ capabilities to automate the discovery of subpopulation patterns
-- **Comprehensive Workflow**: Designed to address a wide range of downstream tasks related to subpopulations
-- **Flexible Integration**: Supports different MLLMs and LLMs
+---
 
-Future Directions:
-- **Exploration of Diverse Subpopulation Structures**: Tailoring subpopulation structure forms to meet specific task requirements
-- **Extension to Vision and Multimodal Tasks**: Broadening the scope of SSD-LLM to more visual and multimodal datasets
-- **Development of Unbiased Datasets**: Promoting the creation of unbias datasets, enabling more reliable analysis and model training
+## 🔗 Featured Resources
 
-## Installation
+- 📄 **Paper (arXiv)**: [LLM as Dataset Analyst](https://arxiv.org/abs/2405.02363)  
+- 📘 **ECCV 2024 Camera Ready**: [Springer Link](https://link.springer.com/chapter/10.1007/978-3-031-73414-4_14)  
+- 🌐 **Project Website**: [llm-as-dataset-analyst.github.io](https://llm-as-dataset-analyst.github.io/)  
+- 🎬 **Video Presentation**: [YouTube](https://www.youtube.com/watch?v=pw-ZPzlXtQA)
 
-1. Clone this repository:
+> 🧠 *Discover subpopulation structures using Large Language Models (LLMs) with linguistic interpretability and automation.*
 
+---
+
+<div align="center">
+  <img src="fig/ssd_llm.png" alt="SSD-LLM Overview" width="600"/>
+</div>
+
+---
+
+## 🧩 Overview
+
+**SSD-LLM** is an innovative framework for discovering subpopulation structures within datasets using Large Language Models (LLMs). By leveraging LLMs' extensive world knowledge and advanced reasoning capabilities, SSD-LLM offers:
+
+- ✨ **Linguistically Interpretable Subpopulation Discovery**  
+- 🤖 **Automated Dataset Analysis via LLMs**  
+- 🔄 **Comprehensive & Modular Workflow**  
+- 🔌 **Flexible Integration with Various MLLMs and LLMs**
+
+**Future Directions**:
+- 📊 Exploration of diverse subpopulation structures  
+- 🖼️ Expansion to vision and multimodal tasks  
+- ✅ Contribution to unbiased dataset creation
+
+---
+
+## ⚙️ Installation
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/llm-as-dataset-analyst/SSDLLM.git
    ```
 
-2. Navigate to the project directory:
-
+2. **Navigate to the project directory**:
    ```bash
    cd SSDLLM
    ```
 
-3. Install the required Python packages:
-
+3. **Install dependencies**:
    ```bash
    pip install -e .
    ```
+
+---
 
 ## Project Structure
 
