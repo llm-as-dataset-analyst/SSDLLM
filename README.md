@@ -4,8 +4,8 @@
   <p align="center">
     <a href="https://arxiv.org/abs/2405.02363"><img src="https://img.shields.io/badge/arXiv-2405.02363-b31b1b.svg?style=flat&logo=arxiv&logoColor=white" alt="arXiv"></a>
     <a href="https://link.springer.com/chapter/10.1007/978-3-031-73414-4_14"><img src="https://img.shields.io/badge/ECCV-2024-blue.svg?style=flat&logo=spring&logoColor=white" alt="ECCV 2024"></a>
-    <a href="https://www.youtube.com/watch?v=pw-ZPzlXtQA"><img src="https://img.shields.io/badge/Video-Demo-red.svg?style=flat&logo=youtube&logoColor=white" alt="Video Demo"></a>
     <a href="https://llm-as-dataset-analyst.github.io/"><img src="https://img.shields.io/badge/Project-Website-brightgreen.svg?style=flat&logo=githubpages&logoColor=white" alt="Project Website"></a>
+    <a href="https://www.youtube.com/watch?v=pw-ZPzlXtQA"><img src="https://img.shields.io/badge/Video-Demo-red.svg?style=flat&logo=youtube&logoColor=white" alt="Video Demo"></a>
   </p>
 </p>
 
