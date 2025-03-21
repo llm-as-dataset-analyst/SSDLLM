@@ -29,7 +29,7 @@
 ---
 
 <div align="center">
-  <img src="fig/ssd_llm.png" alt="SSD-LLM Overview" width="600"/>
+  <img src="fig/ssd_llm.png" alt="SSD-LLM Overview" width="800"/>
 </div>
 
 ---
@@ -38,15 +38,15 @@
 
 **SSD-LLM** is an innovative framework for discovering subpopulation structures within datasets using Large Language Models (LLMs). By leveraging LLMs' extensive world knowledge and advanced reasoning capabilities, SSD-LLM offers:
 
-- ✨ **Linguistically Interpretable Subpopulation Discovery**  
-- 🤖 **Automated Dataset Analysis via LLMs**  
-- 🔄 **Comprehensive & Modular Workflow**  
+- ✨ **Linguistically Interpretable Subpopulation Discovery**  Provides insights into dataset structures in an understandable language format
+- 🤖 **Automated Dataset Analysis via LLMs**  Utilizes LLMs’ capabilities to automate the discovery of subpopulation patterns
+- 🔄 **Comprehensive & Modular Workflow**  Designed to address a wide range of downstream tasks related to subpopulations
 - 🔌 **Flexible Integration with Various MLLMs and LLMs**
 
 **Future Directions**:
-- 📊 Exploration of diverse subpopulation structures  
-- 🖼️ Expansion to vision and multimodal tasks  
-- ✅ Contribution to unbiased dataset creation
+- 📊 **Exploration of diverse subpopulation structures** Tailoring subpopulation structure forms to meet specific task requirements
+- 🖼️ **Expansion to vision and multimodal tasks** Broadening the scope of SSD-LLM to more visual and multimodal datasets  
+- ✅ **Contribution to unbiased dataset creation** Promoting the creation of unbias datasets, enabling more reliable analysis and model training
 
 ---
 
@@ -69,17 +69,23 @@
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-1. `captions`: Contains pre-captioned datasets using `llava1.5-7b`. These can be used directly.
+```
+SSDLLM/
+├── captions/               # Pre-captioned datasets (e.g., with LLaVA1.5-7B)
+├── config/                 # YAML configs for datasets and pipeline settings
+├── run.sh                  # Main entry script
+├── utils.py                # Configuration and utility functions
+└── step1_image_caption/    # Custom dataset captioning logic
+```
 
-2. `config`:
-   - `0_summary.yaml` sets hyperparameters for different stages of the SSDLLM pipeline. Adjust these when running different datasets. The used hyperparameters are automatically saved in the `output` directory when running the code.
-   - Other YAML files correspond to different datasets, including task name, dataset name, class count, and average count per class. These settings affect the final processing form, so they need to be configured properly. Examples are provided for reference.
-   - You can format your own dataset similarly in YAML.
+- `captions/`: Contains pre-captioned datasets using `llava1.5-7b`  
+- `config/`: YAML files with pipeline settings (examples provided)  
+- `run.sh`: Shell script to launch the full pipeline  
+- `step1_image_caption/`: Scripts for batch captioning custom datasets
 
-3. `run.sh`: 
-   - Sets the execution logic for the entire codebase. You can modify the `mllm` and `llm` names, but ensure the preparation of corresponding MLLM and LLM exist.
+---
 
 ## Configuration
 
