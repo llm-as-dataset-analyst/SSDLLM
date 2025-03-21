@@ -141,6 +141,8 @@ def main():
             Summarized_Dimensions_list = Summarized_Dimensions.split(", ")
             if main_subject in ["cifar10", "stl10", "cifar100"]:
                 Expected_list = ["object"]
+            elif main_subject in ["ppmi"]:
+                Expected_list = ["musical instrument"]
             else:
                 Expected_list = [main_subject]
 

@@ -1,0 +1,47 @@
+
+ #### Step2.1 Preprocess [action] Data #####
+0it [00:00, ?it/s]1000it [00:00, 70330.57it/s]
+
+ #### Step2.2 Suggesting Dimension #####
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+
+Loaded from captions/action/llava1.5-7b/action.json
+Dataset is loaded. # of samples = 1000
+Config file have been saved in : output/action/gpt-4o-mini/llava1.5-7b/dim-10-20_attribute-20-20_refine-20-3-5/cfg/action.yaml
+Config file have been saved in : output/action/gpt-4o-mini/llava1.5-7b/dim-10-20_attribute-20-20_refine-20-3-5/cfg/0_summary.yaml
+Finding the Dimensions. Round: 1 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, people, object, attire 
+
+Finding the Dimensions. Round: 2 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, objects, person, environment 
+
+Finding the Dimensions. Round: 3 / 10. Getting Responses from GPT...
+Dimensions Suggested:  position, background, activity, subject, environment 
+
+Finding the Dimensions. Round: 4 / 10. Getting Responses from GPT...
+Dimensions Suggested:  location, activity, subject, background, accessories 
+
+Finding the Dimensions. Round: 5 / 10. Getting Responses from GPT...
+Dimensions Suggested:  location, activity, object, position, number 
+
+Finding the Dimensions. Round: 6 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, subject, clothing, perspective 
+
+Finding the Dimensions. Round: 7 / 10. Getting Responses from GPT...
+Dimensions Suggested:  location, activity, object, attire, environment 
+
+Finding the Dimensions. Round: 8 / 10. Getting Responses from GPT...
+Dimensions Suggested:  position, activity, background, objects, people 
+
+Finding the Dimensions. Round: 9 / 10. Getting Responses from GPT...
+Dimensions Suggested:  color, activity, setting, attire, people 
+
+Finding the Dimensions. Round: 10 / 10. Getting Responses from GPT...
+Dimensions Suggested:  color, activity, location, object, person 
+
+The Dimensions Suggested:  activity, location, people, object, attire, activity, location, objects, person, environment, position, background, activity, subject, environment, location, activity, subject, background, accessories, location, activity, object, position, number, activity, location, subject, clothing, perspective, location, activity, object, attire, environment, position, activity, background, objects, people, color, activity, setting, attire, people, color, activity, location, object, person, Length: 51
+Here are the dimensions suggested after majority counting:  activity, location, people, object, attire, environment, position, background, subject
+Unsummarized:  activity, location, people, object, attire, environment, position, background, subject
+Summarized:  activity, location, people, object, attire, environment, position, subject
+0it [00:00, ?it/s]1it [00:00, 8962.19it/s]
+action- activity

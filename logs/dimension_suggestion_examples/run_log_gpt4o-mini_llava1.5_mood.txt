@@ -1,0 +1,47 @@
+
+ #### Step2.1 Preprocess [mood] Data #####
+0it [00:00, ?it/s]1000it [00:00, 228809.34it/s]
+
+ #### Step2.2 Suggesting Dimension #####
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+
+Loaded from captions/mood/llava1.5-7b/mood.json
+Dataset is loaded. # of samples = 1000
+Config file have been saved in : output/mood/gpt-4o-mini/llava1.5-7b/dim-10-20_attribute-20-20_refine-20-3-5/cfg/mood.yaml
+Config file have been saved in : output/mood/gpt-4o-mini/llava1.5-7b/dim-10-20_attribute-20-20_refine-20-3-5/cfg/0_summary.yaml
+Finding the Dimensions. Round: 1 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, clothing, group size, mood 
+
+Finding the Dimensions. Round: 2 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, people, objects, attire 
+
+Finding the Dimensions. Round: 3 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, people, object, mood 
+
+Finding the Dimensions. Round: 4 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, people, objects, mood 
+
+Finding the Dimensions. Round: 5 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, subject, environment, mood 
+
+Finding the Dimensions. Round: 6 / 10. Getting Responses from GPT...
+Dimensions Suggested:  color, position, activity, background, people 
+
+Finding the Dimensions. Round: 7 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, clothing, object, posture 
+
+Finding the Dimensions. Round: 8 / 10. Getting Responses from GPT...
+Dimensions Suggested:  clothing, activity, environment, character, focus 
+
+Finding the Dimensions. Round: 9 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, outfit, object, emotion 
+
+Finding the Dimensions. Round: 10 / 10. Getting Responses from GPT...
+Dimensions Suggested:  activity, location, clothing, mood, objects 
+
+The Dimensions Suggested:  activity, location, clothing, group size, mood, activity, location, people, objects, attire, activity, location, people, object, mood, activity, location, people, objects, mood, activity, location, subject, environment, mood, color, position, activity, background, people, activity, location, clothing, object, posture, clothing, activity, environment, character, focus, activity, location, outfit, object, emotion, activity, location, clothing, mood, objects, Length: 51
+Here are the dimensions suggested after majority counting:  activity, location, clothing, mood, people, objects, object
+Unsummarized:  activity, location, clothing, mood, people, objects, object
+Summarized:  activity, location, clothing, mood, people, objects
+0it [00:00, ?it/s]1it [00:00, 9576.04it/s]
+mood-mood
